@@ -507,6 +507,18 @@
       }
     }
   }
+  &__wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+.product-slider__wrapper{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.products .products__item{
+  flex-basis: calc(25% - 30px);
+  margin-left: 30px;
 }
 
 .products__item{
@@ -584,7 +596,8 @@
 
 .products__inner-box{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-left: -30px;
   flex-wrap: wrap;
 }
 
@@ -1104,9 +1117,10 @@
 .product-page__content{
   width: 100%;
   .products__item{
-    max-width: 270px;
+    flex-basis: calc(33.3333% - 30px);
     background-color: #fff;
     transition: all .5s;
+    margin-left: 30px;
     &-img{
       min-height: 180px;
     }
@@ -1166,9 +1180,10 @@ button.icon-unsorted{
 
 .product-page__items{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  margin-left: -30px;
 }
 
 .pagination{
@@ -1236,7 +1251,8 @@ button.icon-unsorted{
 }
 .products__item{
   &.list{
-    min-width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
     .products__item-img{
       width: 240px;
       float: left;
@@ -1296,7 +1312,7 @@ button.icon-unsorted{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 0;
+  padding: 16px;
 }
 .product-one__images{
   // background-image: url(../images/content/product.jpg);
@@ -1940,7 +1956,7 @@ button.icon-unsorted{
 }
 .profile-off{
    &::before{
-    background-color: #red;
+    background-color: red;
   }
 }
 .profile__aside-btn{
@@ -2083,6 +2099,269 @@ button.icon-unsorted{
 }
 
 // end profile 
+
+// start upload 
+
+.upload__inner{
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 110px;
+  &-title{
+    font-size: 24px;
+    @include f500;
+    padding: 16px 35px 18px;
+    color: $bg;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 40px;
+  }
+  &-content{
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+  }
+  button{
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 36px;
+    margin-left: 175px;
+    cursor: pointer;
+  }
+}
+.upload-line{
+  margin-bottom: 25px;
+  display: flex;
+  color: #444;
+  label{
+    min-width: 175px;
+    padding-right: 15px;
+    padding-top: 5px;
+    span{
+      color: $green;
+    }
+  }
+  select,
+  input,
+  textarea{
+    width: 100%;
+    display: block;
+    border: 1px solid #f7f7f7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+    &::placeholder{
+      color: #707070;
+    }
+  }
+  textarea{
+    resize: none;
+    height: 150px;
+    padding: 8px 18px;
+  }
+  input[type="file"]{
+    outline: none;
+  }
+  .jq-file__browse {
+    top: 5px;
+    right: auto;
+    left: 9px;
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0px 12px;
+    border: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    color: #444;
+
+    }
+  .jq-file{
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #f7f7f7;
+    height: 40px;
+    background-color: #f9f9f9;
+  }
+  .jq-file__name {
+    outline: none;
+    box-sizing: border-box;
+    margin-left: 100px;
+    width: 100%;
+    height: 40px;
+    padding: 0 18px;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    line-height: 40px;
+    font-size: 12px;
+    color: #707070;
+    }
+  .jq-selectbox{
+    width: 100%;
+    border-radius: 0px;
+  }
+  .jq-selectbox__select{
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow{
+      border: none;
+      font-size: 15px;
+      right: 20px;
+      top: 0;
+      line-height: 40px;
+      &::before{
+        content: '\f0d7';
+        font-family: 'icomoon';
+      }
+    }
+    .jq-selectbox__trigger{
+      border-left: none;
+    }
+  }
+
+// end upload 
+
+// start withdrawals 
+
+.withdrawals__inner{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+.withdrawals__col{
+  max-width: 570px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  height: 100%;
+}
+.withdrawals__title{
+  @include f500;
+  font-size: 24px;
+  padding: 18px 32px 24px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 30px;
+  color: $bg;
+}
+.withdrawals__content{
+  padding-left: 35px;
+  padding-right: 40px;
+  button{
+    margin-bottom: 50px;
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 36px;
+    cursor: pointer;
+  }
+}
+.withdrawals__form-line{
+  margin-bottom: 25px;
+  label{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    @include f500;
+    margin-bottom: 15px;
+    color: $bg;
+    span{
+      color: $green;
+    }
+  }
+  input,
+  select{
+    width: 100%;
+    display: block;
+    border: 1px solid #f7f7f7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+    &::placeholder{
+      color: #707070;
+    }
+  }
+  .jq-selectbox{
+    width: 100%;
+    border-radius: 0px;
+  }
+  .jq-selectbox__select{
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+  }
+  .jq-selectbox__trigger-arrow{
+    border: none;
+    font-size: 15px;
+    right: 20px;
+    top: 0;
+    line-height: 40px;
+    &::before{
+      content: '\f0d7';
+      font-family: 'icomoon';
+    }
+  }
+  .jq-selectbox__trigger{
+    border-left: none;
+  }
+}
+.withdrawals__content-items{
+  padding-bottom: 35px;
+}
+.withdrawals__content-item{
+  display: flex;
+  height: 42px;
+  align-items: center;
+  font-size: 13px;
+  color: #444;
+  &:nth-child(odd){
+    background-color: #f9f9f9;
+  }
+}
+.withdrawals__content-date{
+  width: 154px;
+  padding-left: 20px;
+  @include f500;
+}
+.withdrawals__content-email{
+  width: 180px;
+  @include f500;
+}
+.withdrawals__content-price{
+  width: 70px;
+  @include f700;
+}
+.withdrawals__content-status{
+  width: 88px;
+  @include f700;
+  &.withdrawals__content-paid{
+    color: $green;
+  }
+} 
+
+
+// end withdrawals 
 
 
 
